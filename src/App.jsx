@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/navbar";
 import UseState from "./Components/useState/useState";
+import UseStateWithFunction from "./Components/useState/useStateWithFunction";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -9,9 +10,19 @@ function App() {
     const displaySelectedHook = () => {
         switch (selectedHook) {
             case "useState":
-                return <UseState />;
+                return (
+                    <>
+                        <UseState />
+                        <UseStateWithFunction />
+                    </>
+                );
             default:
-                return <UseState />;
+                return (
+                    <>
+                        <UseState />
+                        <UseStateWithFunction />
+                    </>
+                );
         }
     };
     return (
