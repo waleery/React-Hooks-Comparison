@@ -7,6 +7,11 @@ import UseStateWithFunction from "./Components/useState/useStateWithFunction";
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
 
+    const changeSelectedHook = (choice) => {
+        console.clear()
+        setSelectedHook(choice)
+    }
+
     const displaySelectedHook = () => {
         switch (selectedHook) {
             case "useState":
@@ -16,6 +21,8 @@ function App() {
                         <UseStateWithFunction />
                     </>
                 );
+            case 'useEffect':
+                return null
             default:
                 return (
                     <>
@@ -27,7 +34,7 @@ function App() {
     };
     return (
         <>
-            <Navbar />
+            <Navbar changeSelectedHook={changeSelectedHook}/>
             <main className="main-cointainer">{displaySelectedHook()}</main>
         </>
     );

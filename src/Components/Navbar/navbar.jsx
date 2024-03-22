@@ -1,11 +1,11 @@
 import './navbar.scss'
-const Navbar = () => {
+const Navbar = ({changeSelectedHook}) => {
   return (
     <nav>
         <span>React Hooks Comparison</span>
         <div className='hooks-container'>
-          <span>useState</span>
-          <span>useEffect</span>
+          <span onClick={() => changeSelectedHook("useState")}>useState</span>
+          <span onClick={() => changeSelectedHook("useEffect")}>useEffect</span>
         </div>
     </nav>
   )
