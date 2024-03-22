@@ -1,14 +1,13 @@
 import "./App.css";
 import Navbar from "./Components/Navbar/navbar";
+import UseState from "./Components/useState/useState";
 
 function App() {
     return (
         <>
             <Navbar />
             <main className="main-cointainer">
-                <div className="element">
-                    Element
-                </div>
+                <UseState/>
             </main>
         </>
     );
