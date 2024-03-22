@@ -1,0 +1,19 @@
+.useStateContainer{
+    min-height: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+
+    .title{
+        margin-bottom: 20px;
+    }
+    .buttons{
+        width: 50%;
+        display: flex;
+        justify-content:center;
+        gap:20px
+
+    }
+}
