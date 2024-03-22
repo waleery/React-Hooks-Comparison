@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   height: 100%;
+  width: 100%;
   color-scheme: light dark;
 
   font-synthesis: none;
@@ -11,10 +12,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+  width: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
   height: 100%; 
-  border: 5px solid red;
 }
 
