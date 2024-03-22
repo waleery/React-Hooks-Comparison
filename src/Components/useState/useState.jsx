@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./useState.scss";
 
 const UseState = () => {
     console.log("Render component without function to set initial state")
@@ -7,7 +6,7 @@ const UseState = () => {
     const [state, setState] = useState({ count: 0, color: "blue" });
 
     return (
-        <div className="useStateContainer">
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">UseState</span>
                 <p>Initial state set without function</p>

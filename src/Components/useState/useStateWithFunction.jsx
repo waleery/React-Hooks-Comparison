@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./useState.scss";
 
 function countInitial(){
     console.log('Initial function was called')
@@ -15,7 +14,7 @@ const UseStateWithFunction = () => {
     const [state, setState] = useState(countInitial());
 
     return (
-        <div className="useStateContainer">
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">UseState</span>
                 <p>Initial state set with function</p>
