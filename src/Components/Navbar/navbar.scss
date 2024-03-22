@@ -1,7 +1,21 @@
 nav{
+    display: inline-flex;
+    justify-content: space-between;
+    
     width: 100%;
-    //border-bottom: 1px solid #cfcfcf ;
-    background-color: #cfcfcf;
     padding: 10px 10px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23)
+
+
+    background-color: #cfcfcf;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+
+
+    .hooks-container{
+        display:flex;
+        width: fit-content;
+        
+        span{
+            padding: 0 10px
+        }
+    }
 }
