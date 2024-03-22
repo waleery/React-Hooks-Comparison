@@ -6,8 +6,12 @@
     align-items: center;
     row-gap: 10px;
 
-    .title{
+    .description{
+        text-align: center;
         margin-bottom: 20px;
+        p{
+            font-size: 15px;
+        }
     }
     .buttons{
         width: 50%;

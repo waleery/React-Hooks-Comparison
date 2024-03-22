@@ -2,11 +2,18 @@ import { useState } from "react";
 import "./useState.scss";
 
 const UseState = () => {
+    console.log("Render component without function to set initial state")
+
     const [state, setState] = useState({ count: 0, color: "blue" });
 
     return (
         <div className="useStateContainer">
-            <span className="title">UseState</span>
+            <div className="description">
+                <span className="title">UseState</span>
+                <p>Initial state set without function</p>
+                <p>Only on the first rendering is the function that sets the initial state called.</p>
+                <p>Check the console during the interaction.</p>
+            </div>
 
             <span>Count: {state.count} </span>
             <span>Color: {state.color}</span>
