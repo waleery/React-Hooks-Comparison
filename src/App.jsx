@@ -6,6 +6,7 @@ import UseStateWithFunction from "./Components/useState/useStateWithFunction";
 import UseCallback from "./Components/useCallback/UseCallback.jsx";
 import UseCallbackEmptyDependencyArray from "./Components/useCallback/UseCallbackEmptyDependencyArray.jsx";
 import WithoutUseCallback from "./Components/useCallback/WithoutUseCallback.jsx";
+import UseRef from "./Components/useRef/UseRef.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -14,7 +15,7 @@ function App() {
         console.clear();
         setSelectedHook(choice);
     };
-    
+
 
     const LazyUseMemo = lazy(() => import("./Components/useMemo/UseMemo.jsx"));
     const LazyWithoutUseMemo = lazy(() =>
@@ -45,6 +46,12 @@ function App() {
                         <UseCallback />
                         <UseCallbackEmptyDependencyArray/>
                         <WithoutUseCallback/>
+                    </>
+                );
+            case "useRef":
+                return (
+                    <>
+                        <UseRef/>
                     </>
                 );
             default:
