@@ -7,6 +7,7 @@ const Navbar = ({changeSelectedHook}) => {
           <span onClick={() => changeSelectedHook("useState")}>useState</span>
           <span onClick={() => changeSelectedHook("useEffect")}>useEffect</span>
           <span onClick={() => changeSelectedHook("useMemo")}>useMemo</span>
+          <span onClick={() => changeSelectedHook("useCallback")}>useCallback</span>
         </div>
     </nav>
   )

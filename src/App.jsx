@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar/navbar";
 import UseState from "./Components/useState/useState";
 import UseStateWithFunction from "./Components/useState/useStateWithFunction";
+import UseCallback from "./Components/useCallback/UseCallback.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -11,6 +12,8 @@ function App() {
         console.clear();
         setSelectedHook(choice);
     };
+
+
     const LazyUseMemo = lazy(() => import("./Components/useMemo/UseMemo.jsx"));
     const LazyWithoutUseMemo = lazy(() =>
         import("./Components/useMemo/WithoutUseMemo.jsx")
@@ -34,6 +37,8 @@ function App() {
                         <LazyWithoutUseMemo/>
                     </Suspense>
                 );
+            case "useCallback":
+                return <UseCallback/>
             default:
                 return (
                     <>
