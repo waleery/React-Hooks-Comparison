@@ -11,15 +11,15 @@ const WithoutUseMemo = () => {
         <div className="hookContainer">
             <div className="description">
                 <span className="title">Without useMemo</span>
+                <p className="info">We have very big array where last item isSelected.</p>
+
                 <p>
-                    Selected item is searched ONLY when 'items' state is
-                    changed.
+                    Selected item is searched on every rerender.
                 </p>
                 <p>
-                    When we change state there is not need to search
-                    selectedItem.
+                    When we change state entire component is rerendered.
                 </p>
-                <p>The component is rerendered quickly.</p>
+                <p>The component is rerendered slowly because we have to find selected item.</p>
             </div>
 
             <span>Count: {count} </span>
