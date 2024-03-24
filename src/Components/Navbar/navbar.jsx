@@ -10,6 +10,7 @@ const Navbar = ({changeSelectedHook}) => {
           <span onClick={() => changeSelectedHook("useCallback")}>useCallback</span>
           <span onClick={() => changeSelectedHook("useRef")}>useRef</span>
           <span onClick={() => changeSelectedHook("useContext")}>useContext</span>
+          <span onClick={() => changeSelectedHook("useTransition")}>useTransition</span>
         </div>
     </nav>
   )
