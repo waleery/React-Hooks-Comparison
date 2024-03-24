@@ -28,12 +28,13 @@ const UseRef = () => {
                     tree.
                 </p>
                 <p className="info">Update ref value won't triger rerender.</p>
+                <p>In refs, we can store the previous value of state.</p>
                 <p>
-                    In refs, we can store the previous value. After updating the
-                    state, we update the ref with this value. Updating the ref
-                    won't trigger a rerender of the component, so the new value
-                    of the ref will not be displayed. The new value of the ref
-                    will be displayed after the next rerender of the component.
+                    After updating the state, we update the ref with this value.
+                    Updating the ref won't trigger a rerender of the component,
+                    so the new value of the ref will not be displayed. The new
+                    value of the ref will be displayed after the next rerender
+                    of the component.
                 </p>
                 <p></p>
             </div>
