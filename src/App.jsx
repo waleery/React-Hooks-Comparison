@@ -7,6 +7,10 @@ import UseCallback from "./Components/useCallback/UseCallback.jsx";
 import UseCallbackEmptyDependencyArray from "./Components/useCallback/UseCallbackEmptyDependencyArray.jsx";
 import WithoutUseCallback from "./Components/useCallback/WithoutUseCallback.jsx";
 import UseRef from "./Components/useRef/UseRef.jsx";
+import { ThemeProvider } from "./Components/useContext/ThemeContext.jsx";
+import FunctionComponentContext from "./Components/useContext/FunctionComponentContext.jsx";
+import FunctionComponentContextWithoutColor from "./Components/useContext/FunctionComponentContextWithoutColor.jsx";
+import SecondComponentWithContext from "./Components/useContext/SecondComponentWithContext.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -53,6 +57,14 @@ function App() {
                     <>
                         <UseRef/>
                     </>
+                );
+            case "useContext":
+                return (
+                    <ThemeProvider>
+                        <FunctionComponentContext/>
+                        <SecondComponentWithContext/>
+                        <FunctionComponentContextWithoutColor/>
+                    </ThemeProvider>
                 );
             default:
                 return (
