@@ -11,6 +11,8 @@ import { ThemeProvider } from "./Components/useContext/ThemeContext.jsx";
 import FunctionComponentContext from "./Components/useContext/FunctionComponentContext.jsx";
 import FunctionComponentContextWithoutColor from "./Components/useContext/FunctionComponentContextWithoutColor.jsx";
 import SecondComponentWithContext from "./Components/useContext/SecondComponentWithContext.jsx";
+import UseTransition from "./Components/useTransition/UseTransition.jsx";
+import WithoutUseTransition from "./Components/useTransition/WithoutUseTransition.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -19,7 +21,6 @@ function App() {
         console.clear();
         setSelectedHook(choice);
     };
-
 
     const LazyUseMemo = lazy(() => import("./Components/useMemo/UseMemo.jsx"));
     const LazyWithoutUseMemo = lazy(() =>
@@ -48,23 +49,30 @@ function App() {
                 return (
                     <>
                         <UseCallback />
-                        <UseCallbackEmptyDependencyArray/>
-                        <WithoutUseCallback/>
+                        <UseCallbackEmptyDependencyArray />
+                        <WithoutUseCallback />
                     </>
                 );
             case "useRef":
                 return (
                     <>
-                        <UseRef/>
+                        <UseRef />
                     </>
                 );
             case "useContext":
                 return (
                     <ThemeProvider>
-                        <FunctionComponentContext/>
-                        <SecondComponentWithContext/>
-                        <FunctionComponentContextWithoutColor/>
+                        <FunctionComponentContext />
+                        <SecondComponentWithContext />
+                        <FunctionComponentContextWithoutColor />
                     </ThemeProvider>
+                );
+            case "useTransition":
+                return (
+                    <>
+                        <UseTransition />
+                        <WithoutUseTransition/>
+                    </>
                 );
             default:
                 return (
