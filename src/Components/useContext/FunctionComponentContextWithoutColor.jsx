@@ -22,7 +22,7 @@ const FunctionComponentContextWithoutColor = () => {
         <div className="hookContainer" style={themeStyles}>
             <div className="description">
                 <span className="title">useContext</span>
-                <p className="info">
+                <p className="margin-bottom">
                     When using `useContext`, the component re-renders whenever
                     any context value changes. React will rerender all
                     components that use any context value.

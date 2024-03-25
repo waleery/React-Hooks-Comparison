@@ -24,7 +24,7 @@ const SecondComponentWithContext = () => {
         <div className="hookContainer" style={themeStyles}>
             <div className="description">
                 <span className="title">useContext</span>
-                <p className="info">
+                <p className="margin-bottom">
                     This is the second component using the same context.
                 </p>
 

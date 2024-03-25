@@ -7,7 +7,7 @@ const WithoutDeferredValue = () => {
         <div className="hookContainer" style={{ maxWidth: "35%" }}>
             <div className="description">
                 <span className="title">Without useDeferredValue</span>
-                <p className="info">
+                <p className="margin-bottom">
                     As we type each letter, the parent component is re-rendered,
                     and consequently its child (SlowList) is also re-rendered.
                 </p>

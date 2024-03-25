@@ -15,7 +15,7 @@ const UseMemo = () => {
         <div className="hookContainer">
             <div className="description">
                 <span className="title">With useMemo</span>
-                <p className="info">We have very big array where last item isSelected.</p>
+                <p className="margin-bottom">We have very big array where last item isSelected.</p>
 
                 <p>Selected item is searched ONLY when 'items' state is changed.</p>
                 <p>

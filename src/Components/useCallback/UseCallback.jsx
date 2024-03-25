@@ -41,7 +41,7 @@ const UseCallback = () => {
         <div className="hookContainer" style={{maxWidth:'30%'}}>
             <div className="description">
                 <span className="title">With useCallback</span>
-                <p className="info">
+                <p className="margin-bottom">
                     We have array of names.
                 </p>
 

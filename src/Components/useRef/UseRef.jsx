@@ -23,11 +23,11 @@ const UseRef = () => {
         <div className="hookContainer">
             <div className="description" style={{ maxWidth: "40%" }}>
                 <span className="title">useRef</span>
-                <p className="info">
+                <p className="margin-bottom">
                     With useRef in React, we can reference elements in the DOM
                     tree.
                 </p>
-                <p className="info">Update ref value won't triger rerender.</p>
+                <p className="margin-bottom">Update ref value won't triger rerender.</p>
                 <p>In refs, we can store the previous value of state.</p>
                 <p>
                     After updating the state, we update the ref with this value.

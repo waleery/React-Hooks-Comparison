@@ -36,7 +36,7 @@ const UseCallbackEmptyDependencyArray = () => {
                 <span className="title">
                     With useCallback and empty dependence array
                 </span>
-                <p className="info">We have array of names.</p>
+                <p className="margin-bottom">We have array of names.</p>
 
                 <p>
                     UseCallback freezes function unitl value in dependency array

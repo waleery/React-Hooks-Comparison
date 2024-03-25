@@ -8,7 +8,7 @@ const UseDeferredValue = () => {
         <div className="hookContainer" style={{ maxWidth: "35%" }}>
             <div className="description">
                 <span className="title">With useDeferredValue</span>
-                <p className="info">
+                <p className="margin-bottom">
                     useDeferredValue is a React Hook that lets you defer
                     updating a part of the UI.
                 </p>

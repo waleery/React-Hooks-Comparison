@@ -24,7 +24,7 @@ const FunctionComponentContext = () => {
         <div className="hookContainer" style={themeStyles}>
             <div className="description">
                 <span className="title">useContext</span>
-                <p className="info">
+                <p className="margin-bottom">
                     The `useContext` hook allows you to utilize context in
                     React. Context is used to pass global data throughout the
                     application without manually passing props through many

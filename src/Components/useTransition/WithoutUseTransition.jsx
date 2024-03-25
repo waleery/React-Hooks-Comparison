@@ -15,7 +15,7 @@ const UseTransition = () => {
         <div className="hookContainer" style={{ maxWidth: "35%" }}>
             <div className="description">
                 <span className="title">Without useTranstion</span>
-                <p className="info">
+                <p className="margin-bottom">
                     While changing the tab to "Posts" (which takes a long time
                     to load), the interface gets locked.
                 </p>

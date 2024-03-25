@@ -20,7 +20,7 @@ const UseTransition = () => {
         <div className="hookContainer" style={{ maxWidth: "35%" }}>
             <div className="description">
                 <span className="title">With useTranstion</span>
-                <p className="info">
+                <p className="margin-bottom">
                     useTransition is a React Hook that lets update the state
                     without blocking the UI.
                 </p>
@@ -29,7 +29,7 @@ const UseTransition = () => {
                     We can use the isPending boolean value returned by
                     useTransition to indicate to the user that a transition is
                     in progress. For example, when "Posts" tab loads, we can see
-                    information about that.
+                    margin-bottomrmation about that.
                 </p>
                 <p>
                     We can click "Posts" (which takes a long time to load) and
