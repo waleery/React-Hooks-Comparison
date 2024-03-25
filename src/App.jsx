@@ -13,6 +13,7 @@ import FunctionComponentContextWithoutColor from "./Components/useContext/Functi
 import SecondComponentWithContext from "./Components/useContext/SecondComponentWithContext.jsx";
 import UseTransition from "./Components/useTransition/UseTransition.jsx";
 import WithoutUseTransition from "./Components/useTransition/WithoutUseTransition.jsx";
+import UseDeferredValue from "./Components/useDeferredValue/UseDeferredValue.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -72,6 +73,12 @@ function App() {
                     <>
                         <UseTransition />
                         <WithoutUseTransition/>
+                    </>
+                );
+            case "useDeferredValue":
+                return (
+                    <>
+                        <UseDeferredValue />
                     </>
                 );
             default:
