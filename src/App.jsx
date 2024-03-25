@@ -14,6 +14,7 @@ import SecondComponentWithContext from "./Components/useContext/SecondComponentW
 import UseTransition from "./Components/useTransition/UseTransition.jsx";
 import WithoutUseTransition from "./Components/useTransition/WithoutUseTransition.jsx";
 import UseDeferredValue from "./Components/useDeferredValue/UseDeferredValue.jsx";
+import WithoutDeferredValue from "./Components/useDeferredValue/WithoutDeferredValue.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -79,6 +80,7 @@ function App() {
                 return (
                     <>
                         <UseDeferredValue />
+                        <WithoutDeferredValue/>
                     </>
                 );
             default:
