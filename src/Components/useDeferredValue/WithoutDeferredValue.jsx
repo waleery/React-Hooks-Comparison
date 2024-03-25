@@ -12,12 +12,12 @@ const WithoutDeferredValue = () => {
                     and consequently its child (SlowList) is also re-rendered.
                 </p>
 
-                <p>
+                <p className="margin-bottom">
                     Wrapping the SlowList in memo won't do anything, because to
                     it we pass the typed text, and then the SlowList is
                     generated.
                 </p>
-                <p>
+                <p >
                     We can see the typing delay because the component has to
                     render the list from scratch after typing EACH letter.
                 </p>
