@@ -1,12 +1,13 @@
 .main-cointainer{
     flex-grow: 1;
-
+    height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 5%;
 
     .hookContainer{
+        max-height: 80%;
         min-height: 50%;
         display:flex;
         flex-direction: column;
