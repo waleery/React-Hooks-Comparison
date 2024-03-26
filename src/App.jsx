@@ -15,6 +15,7 @@ import UseTransition from "./Components/useTransition/UseTransition.jsx";
 import WithoutUseTransition from "./Components/useTransition/WithoutUseTransition.jsx";
 import UseDeferredValue from "./Components/useDeferredValue/UseDeferredValue.jsx";
 import WithoutDeferredValue from "./Components/useDeferredValue/WithoutDeferredValue.jsx";
+import UseReducer from "./Components/useReducer/UseReducer.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -81,6 +82,12 @@ function App() {
                     <>
                         <UseDeferredValue />
                         <WithoutDeferredValue/>
+                    </>
+                );
+            case "useReducer":
+                return (
+                    <>
+                        <UseReducer />
                     </>
                 );
             default:
