@@ -25,7 +25,6 @@ const WithoutDeferredValue = () => {
 
             <input onChange={(e) => setText(e.target.value)} />
             <SlowList text={text} />
-            <span>Selected item: </span>
         </div>
     );
 };

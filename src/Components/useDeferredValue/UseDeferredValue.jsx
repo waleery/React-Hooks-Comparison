@@ -35,7 +35,6 @@ const UseDeferredValue = () => {
 
             <input onChange={(e) => setText(e.target.value)} />
             <SlowList text={deferredValue} />
-            <span>Selected item: </span>
         </div>
     );
 };
