@@ -63,9 +63,10 @@ const UseEffect = () => {
                     <button onClick={() => setShow(!show)}>
                         {show ? "Close chat" : "Open chat"}
                     </button>
-                    {show && <hr />}
-                    {show && <ChatRoom roomId={roomId} />}
                 </p>
+
+                {show && <hr />}
+                {show && <ChatRoom roomId={roomId} />}
             </div>
         </div>
     );
@@ -75,12 +76,12 @@ const createConnection = (serverUrl, roomId) => {
     return {
         connect() {
             console.log(
-                `✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...'`
+                '✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...'
             );
         },
         disconnect() {
             console.log(
-                `❌ Disconnected from "' + roomId + '" room at ' + serverUrl`
+                '❌ Disconnected from "' + roomId + '" room at ' + serverUrl
             );
         },
     };
@@ -100,7 +101,7 @@ const ChatRoom = ({ roomId }) => {
 
     return (
         <>
-        <h5>(Check console)</h5>
+            <h5>(Check console)</h5>
             <label>
                 Server URL:{" "}
                 <input
