@@ -1,4 +1,8 @@
+import { useEffect, useState } from "react";
+
 const UseEffect = () => {
+    const [roomId, setRoomId] = useState("general");
+    const [show, setShow] = useState(false);
     return (
         <div className="hookContainer" style={{ maxWidth: "55%" }}>
             <div className="description">
@@ -45,10 +49,67 @@ const UseEffect = () => {
                     class components.
                 </p>
             </div>
-
-            <span>Count: </span>
-            <span>Selected item: </span>
+            <div className="chat">
+                <p>
+                    Choose the chat room:{" "}
+                    <select
+                        value={roomId}
+                        onChange={(e) => setRoomId(e.target.value)}
+                    >
+                        <option value="general">General</option>
+                        <option value="travel">Travel</option>
+                        <option value="music">Music</option>
+                    </select>
+                    <button onClick={() => setShow(!show)}>
+                        {show ? "Close chat" : "Open chat"}
+                    </button>
+                    {show && <hr />}
+                    {show && <ChatRoom roomId={roomId} />}
+                </p>
+            </div>
         </div>
+    );
+};
+
+const createConnection = (serverUrl, roomId) => {
+    return {
+        connect() {
+            console.log(
+                `✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...'`
+            );
+        },
+        disconnect() {
+            console.log(
+                `❌ Disconnected from "' + roomId + '" room at ' + serverUrl`
+            );
+        },
+    };
+};
+
+const ChatRoom = ({ roomId }) => {
+    const [serverUrl, setServerUrl] = useState("https://localhost:1234");
+
+    useEffect(() => {
+        const connection = createConnection(serverUrl, roomId);
+        connection.connect();
+
+        return () => {
+            connection.disconnect();
+        };
+    }, [roomId, serverUrl]);
+
+    return (
+        <>
+        <h5>(Check console)</h5>
+            <label>
+                Server URL:{" "}
+                <input
+                    value={serverUrl}
+                    onChange={(e) => setServerUrl(e.target.value)}
+                />
+            </label>
+            <h2>Welcome to the {roomId} room</h2>
+        </>
     );
 };
 export default UseEffect;
