@@ -60,7 +60,10 @@ const UseEffect = () => {
                         <option value="travel">Travel</option>
                         <option value="music">Music</option>
                     </select>
-                    <button onClick={() => setShow(!show)}>
+                    <button
+                        onClick={() => setShow(!show)}
+                        style={{color: show? "red": "black"}}
+                    >
                         {show ? "Close chat" : "Open chat"}
                     </button>
                 </p>
@@ -76,7 +79,7 @@ const createConnection = (serverUrl, roomId) => {
     return {
         connect() {
             console.log(
-                '✅ Connecting to "' + roomId + '" room at ' + serverUrl + '...'
+                '✅ Connecting to "' + roomId + '" room at ' + serverUrl + "..."
             );
         },
         disconnect() {
