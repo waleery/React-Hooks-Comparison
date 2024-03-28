@@ -16,6 +16,7 @@ import WithoutUseTransition from "./Components/useTransition/WithoutUseTransitio
 import UseDeferredValue from "./Components/useDeferredValue/UseDeferredValue.jsx";
 import WithoutDeferredValue from "./Components/useDeferredValue/WithoutDeferredValue.jsx";
 import UseReducer from "./Components/useReducer/UseReducer.jsx";
+import UseEffect from "./Components/useEffect/UseEffect.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -40,7 +41,11 @@ function App() {
                     </>
                 );
             case "useEffect":
-                return null;
+                return (
+                    <>
+                        <UseEffect />
+                    </>
+                );
             case "useMemo":
                 return (
                     <Suspense fallback={<span>Loading...</span>}>
@@ -74,14 +79,14 @@ function App() {
                 return (
                     <>
                         <UseTransition />
-                        <WithoutUseTransition/>
+                        <WithoutUseTransition />
                     </>
                 );
             case "useDeferredValue":
                 return (
                     <>
                         <UseDeferredValue />
-                        <WithoutDeferredValue/>
+                        <WithoutDeferredValue />
                     </>
                 );
             case "useReducer":
