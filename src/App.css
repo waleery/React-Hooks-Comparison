@@ -1,4 +1,4 @@
-.main-cointainer{
+.main-cointainer {
     flex-grow: 1;
     height: 70%;
     display: flex;
@@ -6,26 +6,26 @@
     align-items: center;
     column-gap: 5%;
 
-    .hookContainer{
+    .hookContainer {
         position: relative;
         max-height: 80%;
         min-height: 50%;
         height: 100%;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         row-gap: 10px;
-    
-        .description{
+
+        .description {
             text-align: center;
             margin-bottom: 20px;
 
-            .margin-bottom{
+            .margin-bottom {
                 margin-bottom: 10px;
             }
 
-            p{
+            p {
                 font-size: 15px;
             }
         }
@@ -43,50 +43,57 @@
                 margin-bottom: 10px;
                 list-style: none;
             }
-        } 
+        }
 
-        .buttons{
+        .buttons {
             width: 50%;
             display: flex;
-            justify-content:center;
-            gap:20px
-    
+            justify-content: center;
+            gap: 20px;
         }
     }
-    .todo-app{
+    .todo-app {
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100%;
         min-width: 400px;
         gap: 15px;
-        
-        form{
+
+        form {
             display: flex;
             align-items: center;
             gap: 10px;
 
-            button{
+            button {
                 font-size: 15px;
             }
         }
 
-        .todos{
+        .todos {
             width: 80%;
 
-            .todo{
+            .todo {
                 display: flex;
                 padding: 5px 0;
                 column-gap: 5px;
-                span{
+                span {
                     flex-grow: 1;
                 }
-                button{
+                button {
                     font-size: 15px;
-                    color:red
+                    color: red;
                 }
             }
         }
-
+    }
+    .chat {
+        p {
+            margin-bottom: 10px;
+            button {
+                font-size: 15px;
+                margin-left: 10px;
+            }
+        }
     }
 }
