@@ -1,28 +1,52 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "./navbar.scss";
 
 const Navbar = ({ changeSelectedHook }) => {
     const navbarRef = useRef(null);
-    const [showShowMenu, setShowMenu] = useState(false)
 
     const checkOverflow = () => {
-        const hasOverflowingChildren =
-        navbarRef.current.offsetHeight < navbarRef.current.scrollHeight ||
-        navbarRef.current.offsetWidth < navbarRef.current.scrollWidth
-        
-            setShowMenu(hasOverflowingChildren)
-        
-    }
+        hideOverflowedElements();
+    };
 
-    useEffect(() => {
-        window.addEventListener('resize', checkOverflow)
 
-        checkOverflow() //inital check
+    const hideOverflowedElements = () => {
+        const hooksContainerChldrens = navbarRef.current.children;
+        const containerWidth = navbarRef.current.offsetWidth;
+
+        let overflowedHooksArray = [];
+
+        if (hooksContainerChldrens) {
+            const hooksArray = Array.from(hooksContainerChldrens);
+
+            let totalWidth = 0 - 10; //minus padding one element
+            hooksArray.forEach((hook) => {
+                totalWidth += hook.offsetWidth;
+                if (totalWidth > containerWidth) {
+                    overflowedHooksArray.push(hook.textContent);
+                }
+            });
+
+            if (overflowedHooksArray) {
+                for (let i = 0; i < hooksContainerChldrens.length; i++) {
+                    overflowedHooksArray.forEach((element) => {
+                        if (hooksContainerChldrens[i].textContent === element) {
+                            hooksContainerChldrens[i].style.display = "none";
+                        }
+                    });
+                }
+            }
+        }
+    };
+
+    useLayoutEffect(() => {
+        window.addEventListener("resize", checkOverflow);
+
+        checkOverflow(); //inital check
 
         return () => {
-            window.removeEventListener('resize', checkOverflow)
-        }
-    }, [])
+            window.removeEventListener("resize", checkOverflow);
+        };
+    }, [navbarRef]);
 
     return (
         <nav>
