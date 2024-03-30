@@ -80,7 +80,6 @@ const Navbar = ({ changeSelectedHook }) => {
                     }
                 }
             });
-            setHooksInDropdown(overflowedHooksArray);
         }
     };
 
