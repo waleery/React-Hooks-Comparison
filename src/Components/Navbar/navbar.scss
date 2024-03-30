@@ -1,7 +1,7 @@
 nav{
     display: inline-flex;
     justify-content: space-between;
-    
+    column-gap: 20px;
     width: 100%;
     padding: 10px 10px;
 
@@ -9,11 +9,13 @@ nav{
     background-color: #cfcfcf;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
 
+    span{
+        white-space: nowrap;
+    }
 
     .hooks-container{
         display:flex;
-        width: fit-content;
-        
+        overflow-x: scroll;
         span{
             padding: 0 10px;
             cursor: pointer;
