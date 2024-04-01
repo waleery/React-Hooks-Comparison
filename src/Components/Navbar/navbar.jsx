@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import "./navbar.scss";
 
 const hooks = [
@@ -14,7 +14,7 @@ const hooks = [
 
 const Navbar = ({ changeSelectedHook }) => {
     const navbarRef = useRef(null);
-    let overflowedHooksArray = [];
+    const [overflowedHooksArray, setOverflowedHooksArray] = useState([]);
 
     const checkOverflow = () => {
         hideOverflowedElements();
@@ -49,10 +49,11 @@ const Navbar = ({ changeSelectedHook }) => {
                     if (newContainerWidth < containerContentWidth) {
                         hook.style.display = "none";
                         break;
-
                     } else {
-                        overflowedHooksArray = overflowedHooksArray.filter(
-                            (hookName) => hookName !== hook.textContent
+                        setOverflowedHooksArray((prev) =>
+                            prev.filter(
+                                (hookName) => hookName !== hook.textContent
+                            )
                         );
                     }
                 }
@@ -76,7 +77,13 @@ const Navbar = ({ changeSelectedHook }) => {
                     hook.style.display = "none";
 
                     if (!overflowedHooksArray.includes(hook.textContent)) {
-                        overflowedHooksArray.push(hook.textContent);
+                        setOverflowedHooksArray((prev) => {
+                            // Sprawdzanie ponownie, czy hook nie został dodany już przez inne hooki
+                            if (!prev.includes(hook.textContent)) {
+                                return [...prev, hook.textContent];
+                            }
+                            return prev;
+                        });
                     }
                 }
             });
@@ -93,6 +100,11 @@ const Navbar = ({ changeSelectedHook }) => {
                     </span>
                 ))}
             </div>
+            <select>
+                {overflowedHooksArray.map((hook) => (
+                    <option key={hook}>{hook}</option>
+                ))}
+            </select>
         </nav>
     );
 };
