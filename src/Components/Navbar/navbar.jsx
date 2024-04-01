@@ -12,7 +12,7 @@ const hooks = [
     "useReducer",
 ];
 
-const Navbar = ({ changeSelectedHook }) => {
+const Navbar = ({ changeSelectedHook, selectedHook }) => {
     const navbarRef = useRef(null);
     const [overflowedHooksArray, setOverflowedHooksArray] = useState([]);
 
@@ -102,9 +102,16 @@ const Navbar = ({ changeSelectedHook }) => {
             </div>
 
             {overflowedHooksArray.length > 0 && (
-                <select>
+                <select
+                    onChange={(e) => changeSelectedHook(e.target.value)}
+                    value={selectedHook}
+                >
+                    <option key={"hook"}>Choose hook</option>
+
                     {overflowedHooksArray.map((hook) => (
-                        <option key={hook}>{hook}</option>
+                        <option key={hook} value={hook}>
+                            {hook}
+                        </option>
                     ))}
                 </select>
             )}

@@ -106,7 +106,7 @@ function App() {
     };
     return (
         <>
-            <Navbar changeSelectedHook={changeSelectedHook} />
+            <Navbar changeSelectedHook={changeSelectedHook} selectedHook={selectedHook}/>
             <main className="main-cointainer">{displaySelectedHook()}</main>
         </>
     );
