@@ -100,11 +100,14 @@ const Navbar = ({ changeSelectedHook }) => {
                     </span>
                 ))}
             </div>
-            <select>
-                {overflowedHooksArray.map((hook) => (
-                    <option key={hook}>{hook}</option>
-                ))}
-            </select>
+
+            {overflowedHooksArray.length > 0 && (
+                <select>
+                    {overflowedHooksArray.map((hook) => (
+                        <option key={hook}>{hook}</option>
+                    ))}
+                </select>
+            )}
         </nav>
     );
 };
