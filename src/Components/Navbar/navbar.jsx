@@ -25,11 +25,11 @@ const Navbar = ({ changeSelectedHook, selectedHook }) => {
         window.addEventListener("resize", checkOverflow);
 
         checkOverflow(); //inital check
-
+        
         return () => {
             window.removeEventListener("resize", checkOverflow);
         };
-    }, [navbarRef]);
+    }, [navbarRef, overflowedHooksArray]);
 
     const showElements = () => {
         const hooksContainerChldrens = navbarRef.current.children;
