@@ -1,6 +1,5 @@
 nav{
     display: inline-flex;
-    justify-content: space-between;
     column-gap: 20px;
     width: 100%;
     padding: 10px 10px;
@@ -11,6 +10,7 @@ nav{
 
     span{
         white-space: nowrap;
+        flex-grow: 1;
     }
 
     .hooks-container{
