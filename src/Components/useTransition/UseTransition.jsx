@@ -40,7 +40,7 @@ const UseTransition = () => {
             </div>
             {isPending && <b>Loading...</b>}
 
-            <nav>
+            <nav className="useTransition-nav">
                 <TabButton
                     isActive={tab === "about"}
                     onClick={() => selectTab("about")}

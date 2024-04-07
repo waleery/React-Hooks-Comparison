@@ -26,7 +26,7 @@ const UseTransition = () => {
                 </p>
             </div>
 
-            <nav>
+            <nav className="useTransition-nav">
                 <TabButton
                     isActive={tab === "about"}
                     onClick={() => selectTab("about")}
