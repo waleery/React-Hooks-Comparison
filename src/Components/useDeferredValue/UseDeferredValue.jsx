@@ -12,7 +12,7 @@ const UseDeferredValue = () => {
                     useDeferredValue is a React Hook that lets you defer
                     updating a part of the UI.
                 </p>
-                <p className="margin-bottom"> 
+                <p className="margin-bottom">
                     During updates, the deferred value will “lag behind” the
                     latest value. So we can see typing text without any lag. In
                     particular, React will first re-render without updating the
@@ -32,8 +32,17 @@ const UseDeferredValue = () => {
                     changes.
                 </p>
             </div>
-
-            <input onChange={(e) => setText(e.target.value)} />
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap:"5px"
+                }}
+            >
+                <span>Type something:</span>
+                <input onChange={(e) => setText(e.target.value)} />
+            </div>
             <SlowList text={deferredValue} />
         </div>
     );

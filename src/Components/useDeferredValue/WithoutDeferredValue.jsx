@@ -17,13 +17,22 @@ const WithoutDeferredValue = () => {
                     it we pass the typed text, and then the SlowList is
                     generated.
                 </p>
-                <p >
+                <p>
                     We can see the typing delay because the component has to
                     render the list from scratch after typing EACH letter.
                 </p>
             </div>
-
-            <input onChange={(e) => setText(e.target.value)} />
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    gap: "5px",
+                }}
+            >
+                <span>Type something:</span>
+                <input onChange={(e) => setText(e.target.value)} />
+            </div>{" "}
             <SlowList text={text} />
         </div>
     );
