@@ -14,8 +14,8 @@ const FunctionComponentContextWithoutColor = () => {
     const themeStyles = {
         backgroundColor: darkTheme ? "#333" : "#FFF",
         color: darkTheme ? "#CCC" : "#333",
-        padding: "2rem",
-        margin: "2rem",
+        maxWidth:'30%'
+
     };
 
     return (
