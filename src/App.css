@@ -1,6 +1,5 @@
 .main-cointainer {
     flex-grow: 1;
-    /* height: 70%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +8,6 @@
 
     .hookContainer {
         position: relative;
-        min-height: 50%;
-        /* height: 100%; */
         display: flex;
         flex-direction: column;
         justify-content: center;
