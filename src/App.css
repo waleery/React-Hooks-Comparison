@@ -6,6 +6,8 @@
     column-gap: 5%;
     flex-wrap: wrap;
 
+    margin-top: 50px;
+
     .hookContainer {
         position: relative;
         display: flex;
