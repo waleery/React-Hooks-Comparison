@@ -21,8 +21,8 @@ const PostsTab = () => {
         items.push(<SlowPost key ={i} index = {i} />)
     }
   return (
-    <div style={{overflowY:'scroll', maxHeight:"20%"}}>
-            <div>{items}</div>
+    <div className="items">
+            {items}
 
     </div>
   )
