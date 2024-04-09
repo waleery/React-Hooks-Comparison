@@ -95,7 +95,7 @@ const Navbar = ({ changeSelectedHook, selectedHook }) => {
             <span>React Hooks Comparison</span>
             <div className="hooks-container" ref={navbarRef}>
                 {hooks.map((hook) => (
-                    <span key={hook} onClick={() => changeSelectedHook(hook)}>
+                    <span key={hook} onClick={() => changeSelectedHook(hook)} style={hook === selectedHook ? {fontWeight:"700"} : {fontWeight:'normal'}}>
                         {hook}
                     </span>
                 ))}
