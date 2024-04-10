@@ -55,6 +55,12 @@
 
         .useTransition-nav {
             position: unset;
+            
+            justify-content: space-around;
+            
+            button {
+                font-size: 20px;
+            }
         }
     }
     .todo-app {
