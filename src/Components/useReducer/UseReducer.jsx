@@ -49,9 +49,9 @@ const UseReducer = () => {
     return (
         <div
             className="hookContainer"
-            style={{ display: "flex", flexDirection: "row", alignItems:'start'}}
+            style={{ display: "flex", flexDirection: "row", alignItems:'start', flexWrap:"wrap"}}
         >
-            <div className="description">
+            <div className="description" style={{maxWidth:"70%"}}>
                 <span className="title">useReducer</span>
                 <p className="margin-bottom">
                     useReducer is a React Hook that allows you to add a reducer
