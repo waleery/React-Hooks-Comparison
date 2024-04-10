@@ -49,7 +49,7 @@ const UseReducer = () => {
     return (
         <div
             className="hookContainer"
-            style={{ maxWidth: "55%", display: "flex", flexDirection: "row" }}
+            style={{ display: "flex", flexDirection: "row", alignItems:'start'}}
         >
             <div className="description">
                 <span className="title">useReducer</span>
