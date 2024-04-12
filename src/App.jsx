@@ -17,6 +17,7 @@ import UseDeferredValue from "./Components/useDeferredValue/UseDeferredValue.jsx
 import WithoutDeferredValue from "./Components/useDeferredValue/WithoutDeferredValue.jsx";
 import UseReducer from "./Components/useReducer/UseReducer.jsx";
 import UseEffect from "./Components/useEffect/UseEffect.jsx";
+import UseImperativeHandle from "./Components/useImperativeHandle/UseImperativeHandle.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -93,6 +94,12 @@ function App() {
                 return (
                     <>
                         <UseReducer />
+                    </>
+                );
+            case "useImperativeHandle":
+                return (
+                    <>
+                        <UseImperativeHandle />
                     </>
                 );
             default:
