@@ -10,6 +10,7 @@ const hooks = [
     "useTransition",
     "useDeferredValue",
     "useReducer",
+    "useImperativeHandle",
 ];
 
 const Navbar = ({ changeSelectedHook, selectedHook }) => {
