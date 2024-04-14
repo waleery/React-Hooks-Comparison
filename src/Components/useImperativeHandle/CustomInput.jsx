@@ -1,23 +1,28 @@
-import React, { useImperativeHandle } from "react";
+import React, { useImperativeHandle, useRef } from "react";
 
-const CustomInput = ({ style, ...props }, ref) => {
+const CustomInput = ({ value }, ref) => {
+    const inputRef = useRef(null);
 
     useImperativeHandle(ref, () => {
-        return { alertHi: () => alert("Hi") };
+        return {
+            focusAndHi() {
+                inputRef.current.focus();
+                alert("Hi!");
+            },
+        };
     });
 
     return (
         <input
-            {...props}
-            ref={ref}
+            ref={inputRef}
+            value={value}
             style={{
                 border: "none",
-                backgroundColor: "lightpink",
+                backgroundColor: "lightblue",
                 padding: ".25em",
                 borderBottom: ".1em solid black",
                 borderTopLeftRadius: ".25em",
                 borderTopRightRadius: ".25em",
-                ...style,
             }}
         />
     );

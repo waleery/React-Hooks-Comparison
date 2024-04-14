@@ -27,7 +27,7 @@ const UseImperativeHandle = () => {
                 <p></p> */}
             </div>
             <CustomInput ref={inputRef} value={value} onChange={(e) => setValue(e.target.value)} />
-            <button onClick={() => inputRef.current.alertHi()}>Focus</button>
+            <button onClick={() => inputRef.current.focusAndHi()}>Focus</button>
 
         </div>
     );
