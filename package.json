@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://waleery.github.io/React-Hooks-Comparison",
+  "homepage": "https://waleery.github.io/React-Hooks-Comparison/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
