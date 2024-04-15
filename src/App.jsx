@@ -18,6 +18,7 @@ import WithoutDeferredValue from "./Components/useDeferredValue/WithoutDeferredV
 import UseReducer from "./Components/useReducer/UseReducer.jsx";
 import UseEffect from "./Components/useEffect/UseEffect.jsx";
 import UseImperativeHandle from "./Components/useImperativeHandle/UseImperativeHandle.jsx";
+import UseLayoutEffect from "./Components/useLayoutEffect/UseLayoutEffect.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -100,6 +101,12 @@ function App() {
                 return (
                     <>
                         <UseImperativeHandle />
+                    </>
+                );
+            case "useLayoutEffect":
+                return (
+                    <>
+                        <UseLayoutEffect />
                     </>
                 );
             default:
