@@ -11,6 +11,7 @@ const hooks = [
     "useDeferredValue",
     "useReducer",
     "useImperativeHandle",
+    "useLayoutEffect"
 ];
 
 const Navbar = ({ changeSelectedHook, selectedHook }) => {
