@@ -19,6 +19,7 @@ import UseReducer from "./Components/useReducer/UseReducer.jsx";
 import UseEffect from "./Components/useEffect/UseEffect.jsx";
 import UseImperativeHandle from "./Components/useImperativeHandle/UseImperativeHandle.jsx";
 import UseLayoutEffect from "./Components/useLayoutEffect/UseLayoutEffect.jsx";
+import WithoutUseLayoutEffect from "./Components/useLayoutEffect/WithoutUseLayoutEffect.jsx";
 
 function App() {
     const [selectedHook, setSelectedHook] = useState("useState");
@@ -106,6 +107,7 @@ function App() {
             case "useLayoutEffect":
                 return (
                     <>
+                        <WithoutUseLayoutEffect/>
                         <UseLayoutEffect />
                     </>
                 );
