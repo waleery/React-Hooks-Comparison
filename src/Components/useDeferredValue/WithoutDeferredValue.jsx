@@ -4,7 +4,7 @@ import SlowList from "./SlowList";
 const WithoutDeferredValue = () => {
     const [text, setText] = useState("");
     return (
-        <div className="hookContainer" style={{ maxWidth: "40%" }}>
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">Without useDeferredValue</span>
                 <p className="margin-bottom">

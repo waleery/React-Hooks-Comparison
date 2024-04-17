@@ -19,7 +19,7 @@ const WithoutUseLayoutEffect = () => {
         setUserId(userIds.find((id) => id !== userId));
     };
     return (
-        <div className="hookContainer" style={{ maxWidth: "40%" }}>
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">With useEffect</span>
                 <p className="margin-bottom">

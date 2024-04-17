@@ -7,7 +7,7 @@ const UseImperativeHandle = () => {
 
     return (
         <div className="hookContainer">
-            <div className="description" style={{ maxWidth: "40%" }}>
+            <div className="description">
                 <span className="title">useImperativeHandle</span>
                 <p className="margin-bottom">
                     useImperativeHandle is a React Hook that allows you to

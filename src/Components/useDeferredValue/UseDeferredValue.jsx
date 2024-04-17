@@ -5,7 +5,7 @@ const UseDeferredValue = () => {
     const [text, setText] = useState("");
     const deferredValue = useDeferredValue(text);
     return (
-        <div className="hookContainer" style={{ maxWidth: "40%" }}>
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">With useDeferredValue</span>
                 <p className="margin-bottom">

@@ -21,7 +21,7 @@ const UseRef = () => {
     };
     return (
         <div className="hookContainer">
-            <div className="description" style={{ maxWidth: "40%" }}>
+            <div className="description">
                 <span className="title">useRef</span>
                 <p className="margin-bottom">
                     With useRef in React, we can reference elements in the DOM

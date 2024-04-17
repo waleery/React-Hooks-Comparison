@@ -17,7 +17,7 @@ const UseTransition = () => {
     };
 
     return (
-        <div className="hookContainer" style={{ maxWidth: "40%" }}>
+        <div className="hookContainer">
             <div className="description">
                 <span className="title">With useTranstion</span>
                 <p className="margin-bottom">
