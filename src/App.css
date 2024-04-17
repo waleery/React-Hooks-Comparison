@@ -66,9 +66,16 @@
 
         .useTransition-nav {
             position: unset;
-            
+            white-space: nowrap;
             justify-content: space-around;
-        
+            align-items: center;
+            font-size: 16px;
+            button{
+                padding: 2px 3%;
+                font-size: 16px;
+
+
+            }
         }
     }
     .flexRowWrap {
