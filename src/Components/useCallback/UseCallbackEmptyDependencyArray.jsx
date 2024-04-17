@@ -31,7 +31,7 @@ const UseCallbackEmptyDependencyArray = () => {
     };
 
     return (
-        <div className="hookContainer" style={{ maxWidth: "30%" }}>
+        <div className="hookContainer oneThird">
             <div className="description">
                 <span className="title">
                     With useCallback and empty dependence array

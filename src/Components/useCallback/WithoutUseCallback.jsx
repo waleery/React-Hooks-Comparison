@@ -34,7 +34,7 @@ const WithoutUseCallback = () => {
     };
 
     return (
-        <div className="hookContainer" style={{ maxWidth: "30%" }}>
+        <div className="hookContainer oneThird">
             <div className="description">
                 <span className="title">Without useCallback</span>
                 <p className="margin-bottom">We have array of names.</p>
