@@ -68,11 +68,20 @@
         
         }
     }
+    .flexRowWrap {
+        flex-direction: row;
+        align-items: start;
+        flex-wrap: wrap;
+        max-width: unset;
+    }
 
-    .oneThird{
+    .oneThird {
         max-width: 30%;
     }
-    
+    .twoThird{
+        max-width: 60%;
+    }
+
     .todo-app {
         display: flex;
         flex-direction: column;

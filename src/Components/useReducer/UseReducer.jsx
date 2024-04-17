@@ -50,16 +50,8 @@ const UseReducer = () => {
         dispatch({ type: ACTIONS.REMOVED, payload: { id: id } });
     };
     return (
-        <div
-            className="hookContainer"
-            style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "start",
-                flexWrap: "wrap",
-            }}
-        >
-            <div className="description" style={{ maxWidth: "70%" }}>
+        <div className="hookContainer flexRowWrap">
+            <div className="description twoThird">
                 <span className="title">useReducer</span>
                 <p className="margin-bottom">
                     useReducer is a React Hook that allows you to add a reducer
@@ -150,7 +142,13 @@ const UseReducer = () => {
                         placeholder="Todo name"
                         onChange={(e) => setName(e.target.value)}
                     />
-                    <button type="submit" disabled={name.length>0 ? false : true}> Add todo</button>
+                    <button
+                        type="submit"
+                        disabled={name.length > 0 ? false : true}
+                    >
+                        {" "}
+                        Add todo
+                    </button>
                 </form>
                 <div className="todos">
                     {todos.map((todo) => (
@@ -161,7 +159,7 @@ const UseReducer = () => {
                                 onClick={() => handleClickCheckbox(todo.id)}
                             />
                             <span>{todo.name}</span>
-                            <button onClick={() => handleRemove(todo.id)} >
+                            <button onClick={() => handleRemove(todo.id)}>
                                 Remove
                             </button>
                         </div>
