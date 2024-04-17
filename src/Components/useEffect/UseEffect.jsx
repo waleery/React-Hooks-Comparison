@@ -4,7 +4,7 @@ const UseEffect = () => {
     const [roomId, setRoomId] = useState("general");
     const [show, setShow] = useState(false);
     return (
-        <div className="hookContainer" style={{ maxWidth: "55%" }}>
+        <div className="hookContainer twoThird">
             <div className="description">
                 <span className="title">useEffect</span>
                 <p className="margin-bottom">
