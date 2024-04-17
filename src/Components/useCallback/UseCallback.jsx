@@ -45,7 +45,7 @@ const UseCallback = () => {
                     useCallback freezes function unitl value in dependency array
                     doesn't change.
                 </p>
-                <p>
+                <p className="margin-bottom"> 
                     The search function is created with useCallback and our
                     dependency array is 'users'.{" "}
                     <span className="greenBoldText">First name</span> is updated
@@ -53,7 +53,7 @@ const UseCallback = () => {
                     delay because function is updated with the new data
                     (dependency array update function after first letter).
                 </p>
-                <p style={{ marginTop: "10px" }}>
+                <p>
                     In React functions are different on every render by default!
                 </p>
                 <p>

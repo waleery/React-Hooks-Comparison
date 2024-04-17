@@ -42,7 +42,7 @@ const UseCallbackEmptyDependencyArray = () => {
                     UseCallback freezes function unitl value in dependency array
                     doesn't change.
                 </p>
-                <p>
+                <p className="margin-bottom">
                     The search function is created with useCallback and our
                     dependency array is empty.
                     <span className="greenBoldText">First name</span> is
@@ -50,7 +50,7 @@ const UseCallbackEmptyDependencyArray = () => {
                     because function isn't updated with new data. (filtered
                     users).
                 </p>
-                <p style={{ marginTop: "10px" }}>
+                <p >
                     In React, functions are different on every render by default!
                 </p>
                 <p>

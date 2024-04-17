@@ -39,13 +39,13 @@ const WithoutUseCallback = () => {
                 <span className="title">Without useCallback</span>
                 <p className="margin-bottom">We have array of names.</p>
 
-                <p>
+                <p className="margin-bottom">
                     The search function is created without useCallback.{" "}
                     <span className="greenBoldText">First name</span> is
                     updated after the search. First name is updated immediately.
                     (Filtered users).
                 </p>
-                <p style={{ marginTop: "10px" }}>
+                <p>
                     In React, functions are different on every render by default!
                 </p>
                 <p>
