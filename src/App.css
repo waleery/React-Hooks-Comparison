@@ -46,7 +46,7 @@
             height: 200px;
             flex-direction: column;
             align-items: center;
-
+            padding: unset;
             .item {
                 width: 100%;
                 padding: 10px 5px;
