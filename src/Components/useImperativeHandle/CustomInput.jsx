@@ -16,14 +16,6 @@ const CustomInput = ({ value }, ref) => {
         <input
             ref={inputRef}
             value={value}
-            style={{
-                border: "none",
-                backgroundColor: "lightblue",
-                padding: ".25em",
-                borderBottom: ".1em solid black",
-                borderTopLeftRadius: ".25em",
-                borderTopRightRadius: ".25em",
-            }}
         />
     );
 };
