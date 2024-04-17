@@ -8,7 +8,7 @@ const SlowList = memo(function SlowList({ text }) {
     for (let i = 0; i < 100; i++) {
         items.push(<SlowItem key={i} text={text} />);
     }
-    return <ul className="items" style={{overflowY:'scroll', maxHeight:"20%"}}>{items}</ul>;
+    return <ul className="items">{items}</ul>;
 });
 
 const SlowItem = ({ text }) => {
