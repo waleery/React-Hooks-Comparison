@@ -45,7 +45,7 @@ const UseCallbackEmptyDependencyArray = () => {
                 <p>
                     The search function is created with useCallback and our
                     dependency array is empty.
-                    <span style={{ color: "green" }}>First name</span> is
+                    <span className="greenBoldText">First name</span> is
                     updated in this function. First name is always the same
                     because function isn't updated with new data. (filtered
                     users).
@@ -72,7 +72,7 @@ const UseCallbackEmptyDependencyArray = () => {
                 </ul>
             </span>
             <span>
-                <span style={{ color: "green" }}>First name</span> in names
+                <span className="greenBoldText">First name</span> in names
                 array state: {firstName}
             </span>
             <span>Color: {color}</span>

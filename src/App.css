@@ -29,6 +29,12 @@
             p {
                 font-size: 15px;
             }
+
+
+        }
+        .greenBoldText{
+            color: green;
+            font-weight: bold;
         }
         .items {
             width: 100%;
@@ -37,7 +43,7 @@
             height: 200px;
             flex-direction: column;
             align-items: center;
-            
+
             .item {
                 width: 100%;
                 padding: 10px 5px;

@@ -41,7 +41,7 @@ const WithoutUseCallback = () => {
 
                 <p>
                     The search function is created without useCallback.{" "}
-                    <span style={{ color: "green" }}>First name</span> is
+                    <span className="greenBoldText">First name</span> is
                     updated after the search. First name is updated immediately.
                     (Filtered users).
                 </p>
@@ -68,7 +68,7 @@ const WithoutUseCallback = () => {
                 </ul>
             </span>
             <span>
-                <span style={{ color: "green" }}>First name</span> in names
+                <span className="greenBoldText">First name</span> in names
                 array state: {firstName}
             </span>
             <span>Color: {color}</span>

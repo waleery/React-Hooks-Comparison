@@ -7,17 +7,15 @@ const allColors = ["green", "blue", "red"];
 const UseCallback = () => {
     const [users, setUsers] = useState(allUsers);
     const [color, setColor] = useState(allColors[0]);
-    const [firstName, setFirstName] = useState(users[0])
+    const [firstName, setFirstName] = useState(users[0]);
 
     const handleSearchWithUseCallback = useCallback(
         (text) => {
-
             const filteredUsers = allUsers.filter((user) =>
                 user.includes(text)
             );
             setUsers(filteredUsers);
             setFirstName(users[0]);
-
         },
         [users]
     );
@@ -41,21 +39,34 @@ const UseCallback = () => {
         <div className="hookContainer oneThird">
             <div className="description">
                 <span className="title">With useCallback</span>
-                <p className="margin-bottom">
-                    We have array of names.
-                </p>
+                <p className="margin-bottom">We have array of names.</p>
 
                 <p>
-                    useCallback freezes function unitl value in dependency array doesn't change.
+                    useCallback freezes function unitl value in dependency array
+                    doesn't change.
                 </p>
                 <p>
-                    The search function is created with useCallback and our dependency array is 'users'. <span style={{color: "green"}}>First name</span> is updated in this function. First name is updated with one letter delay because function is updated with the new data (dependency array update function after first letter).
+                    The search function is created with useCallback and our
+                    dependency array is 'users'.{" "}
+                    <span className="greenBoldText">First name</span> is updated
+                    in this function. First name is updated with one letter
+                    delay because function is updated with the new data
+                    (dependency array update function after first letter).
                 </p>
-                <p style={{marginTop:'10px'}}>In React functions are different on every render by default!</p>
-                <p>If we pass function as a props we have to memoize component to rerender him only when props (in this example - function) changes.</p>
-                <p>Change color won't cause rerender. Because function is 'frozen'. (Check console for logs)</p>
+                <p style={{ marginTop: "10px" }}>
+                    In React functions are different on every render by default!
+                </p>
+                <p>
+                    If we pass function as a props we have to memoize component
+                    to rerender him only when props (in this example - function)
+                    changes.
+                </p>
+                <p>
+                    Change color won't cause rerender. Because function is
+                    'frozen'. (Check console for logs)
+                </p>
             </div>
-            <Search onChange={handleSearchWithUseCallback}/>
+            <Search onChange={handleSearchWithUseCallback} />
             <span>
                 Users:
                 <ul>
@@ -64,11 +75,18 @@ const UseCallback = () => {
                     ))}
                 </ul>
             </span>
-            <span><span style={{color: "green"}}>First name</span> in names array state: {firstName}</span>
+            <span>
+                <span className="greenBoldText">First name</span> in names array
+                state: {firstName}
+            </span>
             <span>Color: {color}</span>
             <div className="buttons">
-                <button onClick={() => setUsers(shuffleArray(users))}>Shuffle Users</button>
-                <button onClick={() => setColor(shuffleArray(allColors)[0])}>Change Color</button>
+                <button onClick={() => setUsers(shuffleArray(users))}>
+                    Shuffle Users
+                </button>
+                <button onClick={() => setColor(shuffleArray(allColors)[0])}>
+                    Change Color
+                </button>
             </div>
         </div>
     );
