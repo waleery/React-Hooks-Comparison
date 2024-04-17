@@ -32,17 +32,11 @@ const UseDeferredValue = () => {
                     changes.
                 </p>
             </div>
-            <div
-                style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    gap:"5px"
-                }}
-            >
-                <span>Type something:</span>
-                <input onChange={(e) => setText(e.target.value)} />
-            </div>
+
+            <input
+                placeholder="Type something"
+                onChange={(e) => setText(e.target.value)}
+            />
             <SlowList text={deferredValue} />
         </div>
     );
