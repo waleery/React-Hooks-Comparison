@@ -62,7 +62,7 @@ const UseEffect = () => {
                     </select>
                     <button
                         onClick={() => setShow(!show)}
-                        style={{color: show? "red": "black"}}
+                        className={show ? "red" : null}
                     >
                         {show ? "Close chat" : "Open chat"}
                     </button>
